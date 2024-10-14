@@ -6,11 +6,14 @@
 /*   By: ymetinog <ymetinog@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 15:02:48 by ymetinog          #+#    #+#             */
-/*   Updated: 2024/10/07 15:38:50 by ymetinog         ###   ########.fr       */
+/*   Updated: 2024/10/08 19:42:33 by ymetinog         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
-    return (c >= ' ' && c <= '~' ? 1 : 0);
+	if (c >= ' ' && c <= '~')
+		return (1);
+	else
+		return (0);
 }

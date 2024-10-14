@@ -1,28 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ymetinog <ymetinog@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/08 14:42:43 by ymetinog          #+#    #+#             */
-/*   Updated: 2024/10/08 19:53:20 by ymetinog         ###   ########.fr       */
+/*   Created: 2024/10/08 14:44:37 by ymetinog          #+#    #+#             */
+/*   Updated: 2024/10/08 19:51:33 by ymetinog         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t maxlen)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t	srclen;
+	char			*str;
+	unsigned int	i;
+	size_t			s1len;
+	size_t			s2len;
 
-	srclen = ft_strlen(src);
-	if (srclen + 1 < maxlen)
-		ft_memcpy(dst, src, srclen + 1);
-	else if (maxlen != 0)
+	s1len = ft_strlen(s1);
+	s2len = ft_strlen(s2);
+	str = malloc(s1len + s2len + 1 * sizeof(char));
+	i = 0;
+	while (i < (s1len + s2len + 1))
 	{
-		ft_memcpy(dst, src, maxlen - 1);
-		dst[maxlen - 1] = '\0';
+		if (i < s1len)
+		{
+			str[i] = *s1;
+			s1++;
+		}
+		else
+		{
+			str[i] = *s2;
+			s2++;
+		}
+		i++;
 	}
-	return (srclen);
+	str[i + 1] = '\0';
+	return (str);
 }

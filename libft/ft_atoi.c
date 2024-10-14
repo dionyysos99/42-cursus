@@ -1,18 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ymetinog <ymetinog@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/07 14:25:31 by ymetinog          #+#    #+#             */
-/*   Updated: 2024/10/08 20:44:52 by ymetinog         ###   ########.fr       */
+/*   Created: 2024/10/08 14:49:08 by ymetinog          #+#    #+#             */
+/*   Updated: 2024/10/09 13:07:54 by ymetinog         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
+#include "libft.h"
+
+int	ft_atoi(const char *str)
 {
-	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
-		return (1);
-	return (0);
+	int	res;
+	int	sign;
+
+	res = 0;
+	sign = 1;
+	while ((*str >= 9 && *str <= 13) || *str == ' ')
+		str++;
+	if (*str == '-')
+	{
+		sign = -sign;
+		str++;
+	}
+	else
+		if(*str == '+')
+			str++;
+	while (*str >= '0' && *str <= '9')
+	{
+		res = res * 10 + *str - 48;
+		str++;
+	}
+	return (res * sign);
 }

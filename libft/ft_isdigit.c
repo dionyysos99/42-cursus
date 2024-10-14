@@ -6,11 +6,13 @@
 /*   By: ymetinog <ymetinog@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 14:26:25 by ymetinog          #+#    #+#             */
-/*   Updated: 2024/10/07 15:06:17 by ymetinog         ###   ########.fr       */
+/*   Updated: 2024/10/08 19:42:28 by ymetinog         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
-    return (c >= 0 && c <= 9 ? 1 : 0);
+	if (c >= '0' && c <= '9')
+		return (1);
+	return (0);
 }

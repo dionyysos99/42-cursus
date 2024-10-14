@@ -6,11 +6,14 @@
 /*   By: ymetinog <ymetinog@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 14:45:34 by ymetinog          #+#    #+#             */
-/*   Updated: 2024/10/07 15:06:19 by ymetinog         ###   ########.fr       */
+/*   Updated: 2024/10/08 19:42:23 by ymetinog         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isascii(int c)
+int	ft_isascii(int c)
 {
-    return (c >= 0 && c <= 127 ? 1 : 0);
+	if (c >= 0 && c <= 127)
+		return (1);
+	else
+		return (0);
 }
