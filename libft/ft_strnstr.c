@@ -6,7 +6,7 @@
 /*   By: ymetinog <ymetinog@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 19:53:35 by ymetinog          #+#    #+#             */
-/*   Updated: 2024/10/15 00:17:29 by ymetinog         ###   ########.fr       */
+/*   Updated: 2024/10/15 02:24:13 by ymetinog         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,24 @@
 
 char	*ft_strnstr(char *haystack, char *needle, size_t len)
 {
-	size_t	i;
-	size_t	size;
-	size_t	slen;
+    size_t h;
+	size_t n;
 
-	size = ft_strlen(needle);
-	slen = 0;
-	if (!*needle)
-		return (haystack);
-	while (*haystack && slen < len)
+	h = 0;
+	if (needle[0] == '\0')
+		return ((char *)haystack);
+	while (haystack[h] != '\0')
 	{
-		i = 0;
-		while (haystack[i] == needle[i])
+		n = 0;
+		while (haystack[h + n] == needle[n] && (h + n) < len)
 		{
-			if (i == size - 1)
-				return (haystack);
-			i++;
+			if (haystack[h + n] == '\0' && needle[n] == '\0')
+				return ((char *)&haystack[h]);
+			n++;
 		}
-		slen++;
-		haystack++;
+		if (needle[n] == '\0')
+			return ((char *)haystack + h);
+		h++;
 	}
 	return (0);
 }
