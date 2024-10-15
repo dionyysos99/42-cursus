@@ -6,7 +6,7 @@
 /*   By: ymetinog <ymetinog@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 19:53:35 by ymetinog          #+#    #+#             */
-/*   Updated: 2024/10/15 02:24:13 by ymetinog         ###   ########.fr       */
+/*   Updated: 2024/10/15 09:15:50 by ymetinog         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strnstr(char *haystack, char *needle, size_t len)
 {
-    size_t h;
-	size_t n;
+	size_t	h;
+	size_t	n;
 
 	h = 0;
 	if (needle[0] == '\0')

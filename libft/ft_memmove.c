@@ -1,32 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ymetinog <ymetinog@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/15 08:55:19 by ymetinog          #+#    #+#             */
-/*   Updated: 2024/10/15 08:55:33 by ymetinog         ###   ########.fr       */
+/*   Created: 2024/10/15 09:23:16 by ymetinog          #+#    #+#             */
+/*   Updated: 2024/10/15 09:47:44 by ymetinog         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	long	nb;
+	char		*cpy_dest;
+	const char	*cpy_src;
+	const char	*end_src;
+	char		*end_dst;
 
-	nb = n;
-	if (nb < 0)
-	{
-		ft_putchar_fd('-', fd);
-		nb = (nb * -1);
-	}
-	if (nb < 10)
-		ft_putchar_fd(nb + 48, fd);
-	if (nb > 9)
-	{
-		ft_putnbr_fd(nb / 10, fd);
-		ft_putnbr_fd(nb % 10, fd);
-	}
+	cpy_dest = dst;
+	end_dst = cpy_dest + (len - 1);
+	cpy_src = src;
+	end_src = cpy_src + (len - 1);
+	if (cpy_dest < cpy_src)
+		while (len--)
+			*cpy_dest++ = *cpy_src++;
+	else
+		while (len--)
+			*end_dst-- = *end_src--;
+	return (dst);
 }

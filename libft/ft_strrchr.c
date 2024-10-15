@@ -6,7 +6,7 @@
 /*   By: ymetinog <ymetinog@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 14:38:45 by ymetinog          #+#    #+#             */
-/*   Updated: 2024/10/09 12:40:52 by ymetinog         ###   ########.fr       */
+/*   Updated: 2024/10/15 09:16:21 by ymetinog         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strrchr(char *str, int c)
 	while (slen--)
 	{
 		if (*(str + slen) == (char)c)
-			return((char *)(str + slen));
+			return ((char *)(str + slen));
 	}
 	return (0);
 }

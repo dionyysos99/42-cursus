@@ -6,7 +6,7 @@
 /*   By: ymetinog <ymetinog@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 14:49:08 by ymetinog          #+#    #+#             */
-/*   Updated: 2024/10/09 13:07:54 by ymetinog         ###   ########.fr       */
+/*   Updated: 2024/10/15 08:46:18 by ymetinog         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	ft_atoi(const char *str)
 		str++;
 	}
 	else
-		if(*str == '+')
+		if (*str == '+')
 			str++;
 	while (*str >= '0' && *str <= '9')
 	{
