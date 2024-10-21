@@ -1,35 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ymetinog <ymetinog@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/08 14:44:37 by ymetinog          #+#    #+#             */
-/*   Updated: 2024/10/20 02:44:28 by ymetinog         ###   ########.fr       */
+/*   Created: 2024/10/16 19:05:09 by ymetinog          #+#    #+#             */
+/*   Updated: 2024/10/20 02:20:55 by ymetinog         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+t_list	*ft_lstnew(void *content)
 {
-	char	*new_str;
-	int		i;
-	int		j;
+	t_list	*a;
 
-	new_str = (char *)malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
-	if (!s1 || !s2 || !(new_str))
-		return (0);
-	i = 0;
-	while (s1[i] != '\0')
-	{
-		new_str[i] = s1[i];
-		i++;
-	}
-	j = 0;
-	while (s2[j] != '\0')
-		new_str[i++] = s2[j++];
-	new_str[i] = '\0';
-	return (new_str);
+	a = (t_list *)malloc(sizeof(t_list));
+	if (!a)
+		return (NULL);
+	a->content = content;
+	a->next = NULL;
+	return (a);
 }

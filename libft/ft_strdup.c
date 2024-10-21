@@ -6,7 +6,7 @@
 /*   By: ymetinog <ymetinog@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 19:44:48 by ymetinog          #+#    #+#             */
-/*   Updated: 2024/10/08 19:50:08 by ymetinog         ###   ########.fr       */
+/*   Updated: 2024/10/20 02:41:39 by ymetinog         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ char	*ft_strdup(const char *s1)
 
 	len = ft_strlen(s1);
 	str = malloc(len + 1 * sizeof(char));
-	if (*s1 == '\0')
-		return (str);
+	if (!str)
+		return (NULL);
 	ft_memcpy(str, s1, len);
 	str[len] = '\0';
 	return (str);

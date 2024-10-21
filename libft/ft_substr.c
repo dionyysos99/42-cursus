@@ -6,7 +6,7 @@
 /*   By: ymetinog <ymetinog@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 09:18:34 by ymetinog          #+#    #+#             */
-/*   Updated: 2024/10/15 09:20:25 by ymetinog         ###   ########.fr       */
+/*   Updated: 2024/10/21 10:31:42 by ymetinog         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,23 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char			*new_str;
-	unsigned int	i;
-	unsigned int	j;
+	size_t	i;
+	char	*str;
 
+	if (!s)
+		return (NULL);
+	if (start > ft_strlen(s))
+		return ((char *)ft_calloc(1, 1));
+	if (len > ft_strlen(s + start))
+		len = ft_strlen(s + start);
+	str = ft_calloc(len + 1, sizeof(char));
+	if (!str)
+		return (NULL);
 	i = 0;
-	j = 0;
-	new_str = malloc(len + 1 *(sizeof(char)));
-	while (s[i])
+	while (i < len)
 	{
-		if ((i >= start) && (i <= start + len))
-		{
-			while (i < (len + start))
-			{
-				new_str[j] = s[i];
-				i++;
-				j++;
-			}
-		}
+		str[i] = s[start + i];
 		i++;
 	}
-	new_str[j] = '\0';
-	return (new_str);
+	return (str);
 }

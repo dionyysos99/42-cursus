@@ -1,35 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ymetinog <ymetinog@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/08 14:44:37 by ymetinog          #+#    #+#             */
-/*   Updated: 2024/10/20 02:44:28 by ymetinog         ###   ########.fr       */
+/*   Created: 2024/10/16 19:09:21 by ymetinog          #+#    #+#             */
+/*   Updated: 2024/10/16 19:10:20 by ymetinog         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	char	*new_str;
-	int		i;
-	int		j;
+	t_list	*ptr;
 
-	new_str = (char *)malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
-	if (!s1 || !s2 || !(new_str))
-		return (0);
-	i = 0;
-	while (s1[i] != '\0')
+	ptr = *lst;
+	while (ptr)
 	{
-		new_str[i] = s1[i];
-		i++;
+		ptr = ptr->next;
+		if ((*lst)->next != 0)
+			(*lst)->next = 0;
+		ft_lstdelone(*lst, del);
+		*lst = ptr;
 	}
-	j = 0;
-	while (s2[j] != '\0')
-		new_str[i++] = s2[j++];
-	new_str[i] = '\0';
-	return (new_str);
 }

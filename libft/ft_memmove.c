@@ -6,7 +6,7 @@
 /*   By: ymetinog <ymetinog@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 09:23:16 by ymetinog          #+#    #+#             */
-/*   Updated: 2024/10/15 09:47:44 by ymetinog         ###   ########.fr       */
+/*   Updated: 2024/10/20 02:57:15 by ymetinog         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	const char	*end_src;
 	char		*end_dst;
 
+	if (!dst && !src)
+		return (NULL);
 	cpy_dest = dst;
 	end_dst = cpy_dest + (len - 1);
 	cpy_src = src;

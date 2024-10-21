@@ -6,7 +6,7 @@
 /*   By: ymetinog <ymetinog@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 14:45:49 by ymetinog          #+#    #+#             */
-/*   Updated: 2024/10/08 17:27:56 by ymetinog         ###   ########.fr       */
+/*   Updated: 2024/10/21 10:29:48 by ymetinog         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,16 @@
 
 char	*ft_strchr(const char *str, int c)
 {
-	while (*str)
+	size_t	idx;
+
+	idx = 0;
+	while (str[idx])
 	{
-		if (*str == c)
-			return ((char *)str);
-		str++;
+		if (str[idx] == (char)c)
+			return ((char *)&str[idx]);
+		idx++;
 	}
-	if (c == '\0')
-		return ((char *)str);
-	return (0);
+	if (str[idx] == (char)c)
+		return ((char *)&str[idx]);
+	return (NULL);
 }
