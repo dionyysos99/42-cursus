@@ -6,11 +6,11 @@
 /*   By: ymetinog <ymetinog@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 14:31:32 by ymetinog          #+#    #+#             */
-/*   Updated: 2024/10/08 17:44:07 by ymetinog         ###   ########.fr       */
+/*   Updated: 2024/10/21 11:05:41 by ymetinog         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
 
 void	ft_bzero(void *s, size_t n)
 {

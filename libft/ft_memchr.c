@@ -6,11 +6,11 @@
 /*   By: ymetinog <ymetinog@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 10:08:09 by ymetinog          #+#    #+#             */
-/*   Updated: 2024/10/21 10:30:13 by ymetinog         ###   ########.fr       */
+/*   Updated: 2024/10/21 10:57:26 by ymetinog         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

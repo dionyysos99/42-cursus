@@ -6,11 +6,11 @@
 /*   By: ymetinog <ymetinog@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 14:43:36 by ymetinog          #+#    #+#             */
-/*   Updated: 2024/10/08 20:12:32 by ymetinog         ###   ########.fr       */
+/*   Updated: 2024/10/21 11:02:09 by ymetinog         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {

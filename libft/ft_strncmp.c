@@ -6,11 +6,11 @@
 /*   By: ymetinog <ymetinog@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 14:45:14 by ymetinog          #+#    #+#             */
-/*   Updated: 2024/10/15 09:15:00 by ymetinog         ###   ########.fr       */
+/*   Updated: 2024/10/21 12:47:57 by ymetinog         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
 
 int	ft_strncmp(char *s1, char *s2, size_t len)
 {

@@ -6,11 +6,11 @@
 /*   By: ymetinog <ymetinog@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 14:47:19 by ymetinog          #+#    #+#             */
-/*   Updated: 2024/10/08 20:04:36 by ymetinog         ###   ########.fr       */
+/*   Updated: 2024/10/21 10:57:40 by ymetinog         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
 
 void	*ft_memcpy(void *dst, const void *src, size_t len)
 {

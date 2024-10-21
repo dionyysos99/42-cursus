@@ -6,11 +6,11 @@
 /*   By: ymetinog <ymetinog@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 08:46:48 by ymetinog          #+#    #+#             */
-/*   Updated: 2024/10/15 08:50:57 by ymetinog         ###   ########.fr       */
+/*   Updated: 2024/10/21 10:56:10 by ymetinog         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
 
 static	int	astrlen(int n)
 {

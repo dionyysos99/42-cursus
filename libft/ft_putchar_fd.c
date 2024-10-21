@@ -6,11 +6,11 @@
 /*   By: ymetinog <ymetinog@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 08:51:56 by ymetinog          #+#    #+#             */
-/*   Updated: 2024/10/15 08:52:35 by ymetinog         ###   ########.fr       */
+/*   Updated: 2024/10/21 10:58:14 by ymetinog         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <unistd.h>
 
 void	ft_putchar_fd(char c, int fd)
 {

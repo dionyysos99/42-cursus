@@ -6,15 +6,13 @@
 /*   By: ymetinog <ymetinog@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 14:18:31 by ymetinog          #+#    #+#             */
-/*   Updated: 2024/10/21 10:33:40 by ymetinog         ###   ########.fr       */
+/*   Updated: 2024/10/21 10:57:14 by ymetinog         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdlib.h>
-# include <unistd.h>
 # include <stddef.h>
 
 int					ft_isalpha(int c);

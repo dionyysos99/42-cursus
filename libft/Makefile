@@ -1,6 +1,6 @@
 NAME = libft.a
 
-CFLAGS = -Wall -Werror -Wextra -I. -c
+CFLAGS = -Wall -Werror -Wextra
 
 FILES = ft_isalpha.c \
 				ft_isdigit.c \
@@ -49,21 +49,25 @@ B	= 	ft_lstnew_bonus.c \
 
 B_OBJ =	$(B:.c=.o)
 
-OBJ = $(FILES:%.c=%.o)
+OBJ = $(SRC:.c=.o)
 
 all: $(NAME)
 
-bonus:	$(B_OBJ)
-	ar rcs $(NAME) $(B_OBJ)
+%.o : %.c
+	cc $(CFLAGS) -c $< -o $@
+
+bonus: $(NAME)
+
+SRC         =   $(FILES)
+ifneq ($(filter bonus,$(MAKECMDGOALS)),)
+SRC         +=   $(B)
+endif
 
 $(NAME): $(OBJ)
-	ar rcs $(NAME) $(OBJ)
-
-$(OBJ): $(FILES)
-	cc $(CFLAGS) $(FILES)
+	ar rcs $(NAME) $(OBJ)	
 
 clean:
-	rm -f $(OBJ)
+	rm -f $(OBJ) $(B_OBJ)
 
 fclean: clean
 	rm -f $(NAME)

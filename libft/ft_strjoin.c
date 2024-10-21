@@ -6,10 +6,11 @@
 /*   By: ymetinog <ymetinog@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 14:44:37 by ymetinog          #+#    #+#             */
-/*   Updated: 2024/10/20 02:44:28 by ymetinog         ###   ########.fr       */
+/*   Updated: 2024/10/21 16:57:58 by ymetinog         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)

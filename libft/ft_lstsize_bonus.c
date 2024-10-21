@@ -6,7 +6,7 @@
 /*   By: ymetinog <ymetinog@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 19:04:22 by ymetinog          #+#    #+#             */
-/*   Updated: 2024/10/19 15:21:33 by ymetinog         ###   ########.fr       */
+/*   Updated: 2024/10/21 12:34:54 by ymetinog         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_lstsize(t_list *lst)
 {
-	size_t	len;
+	int	len;
 
 	len = 0;
 	while (lst)

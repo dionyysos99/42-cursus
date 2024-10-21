@@ -6,11 +6,12 @@
 /*   By: ymetinog <ymetinog@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 19:05:09 by ymetinog          #+#    #+#             */
-/*   Updated: 2024/10/20 02:20:55 by ymetinog         ###   ########.fr       */
+/*   Updated: 2024/10/21 16:58:22 by ymetinog         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 t_list	*ft_lstnew(void *content)
 {

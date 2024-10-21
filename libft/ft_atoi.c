@@ -6,11 +6,9 @@
 /*   By: ymetinog <ymetinog@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 14:49:08 by ymetinog          #+#    #+#             */
-/*   Updated: 2024/10/21 10:39:28 by ymetinog         ###   ########.fr       */
+/*   Updated: 2024/10/21 16:54:59 by ymetinog         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_atoi(const char *str)
 {

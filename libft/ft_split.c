@@ -6,11 +6,11 @@
 /*   By: ymetinog <ymetinog@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 08:57:13 by ymetinog          #+#    #+#             */
-/*   Updated: 2024/10/21 10:29:18 by ymetinog         ###   ########.fr       */
+/*   Updated: 2024/10/21 11:00:59 by ymetinog         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
 
 static int	unleah(char **str, int size)
 {

@@ -6,11 +6,12 @@
 /*   By: ymetinog <ymetinog@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 19:44:48 by ymetinog          #+#    #+#             */
-/*   Updated: 2024/10/20 02:41:39 by ymetinog         ###   ########.fr       */
+/*   Updated: 2024/10/21 11:01:28 by ymetinog         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 char	*ft_strdup(const char *s1)
 {

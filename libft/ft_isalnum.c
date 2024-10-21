@@ -6,11 +6,9 @@
 /*   By: ymetinog <ymetinog@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 13:03:30 by ymetinog          #+#    #+#             */
-/*   Updated: 2024/10/08 13:03:33 by ymetinog         ###   ########.fr       */
+/*   Updated: 2024/10/21 16:54:41 by ymetinog         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isalnum(int c)
 {
