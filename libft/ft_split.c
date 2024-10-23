@@ -6,7 +6,7 @@
 /*   By: ymetinog <ymetinog@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 08:57:13 by ymetinog          #+#    #+#             */
-/*   Updated: 2024/10/21 11:00:59 by ymetinog         ###   ########.fr       */
+/*   Updated: 2024/10/23 17:57:04 by ymetinog         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,9 +51,9 @@ static void	write_word(char *dest, const char *from, char charset)
 
 static int	write_split(char **split, const char *str, char charset)
 {
-	int		i;
-	int		j;
-	int		word;
+	int	i;
+	int	j;
+	int	word;
 
 	word = 0;
 	i = 0;
