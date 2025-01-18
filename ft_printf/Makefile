@@ -1,5 +1,10 @@
 NAME = libftprintf.a
 
+CC := gcc
+ifeq ($(shell uname),Darwin)
+    CC := clang
+endif
+
 CFLAGS = -Wall -Werror -Wextra -I. -c -g
 
 FILES = ft_printf.c \
@@ -18,7 +23,7 @@ $(NAME): $(OBJ)
 	ar rcs $(NAME) $(OBJ)
 
 $(OBJ): $(FILES)
-	cc $(CFLAGS) $(FILES)
+	$(CC) $(CFLAGS) $(FILES)
 
 clean:
 	rm -f $(OBJ)

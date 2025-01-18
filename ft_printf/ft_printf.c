@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ymetinog <ymetinog@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ymetinog <ymetinog@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 09:55:06 by ymetinog          #+#    #+#             */
-/*   Updated: 2024/10/26 15:05:38 by ymetinog         ###   ########.fr       */
+/*   Updated: 2025/01/18 13:47:25 by ymetinog         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdarg.h>
+#include <unistd.h>
 
 static int	ft_phchck(const char str)
 {
@@ -36,7 +36,7 @@ static int	ft_phsender(va_list *args, const char str)
 	else if (str == 'X' || str == 'x')
 		return (ft_puthex(va_arg((*args), unsigned int), str));
 	else if (str == 'p')
-		return (ft_putpointer(va_arg((*args), unsigned long), 1));
+		return (ft_putpointer(va_arg((*args), unsigned long), str));
 	else
 		return (0);
 }
@@ -51,6 +51,8 @@ int	ft_printf(const char *str, ...)
 	ccounter = 0;
 	i = 0;
 	temp = 0;
+	if(str == (void *)0)
+		return (0);
 	va_start(arg, str);
 	while (str[i])
 	{
@@ -69,3 +71,4 @@ int	ft_printf(const char *str, ...)
 	va_end(arg);
 	return (ccounter);
 }
+
