@@ -6,7 +6,7 @@
 /*   By: ymetinog <ymetinog@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 09:55:06 by ymetinog          #+#    #+#             */
-/*   Updated: 2025/01/19 06:10:41 by ymetinog         ###   ########.fr       */
+/*   Updated: 2025/01/19 06:55:43 by ymetinog         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ static int	ft_phsender(va_list *args, const char str)
 	else if (str == 'X' || str == 'x')
 		return (ft_puthex(va_arg((*args), unsigned int), str));
 	else if (str == 'p')
-		return (ft_putpointer(va_arg((*args), unsigned long), str));
+		return (ft_putpointer(va_arg((*args), unsigned long)));
 	else
 		return (0);
 }
