@@ -6,12 +6,12 @@
 /*   By: ymetinog <ymetinog@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 09:55:06 by ymetinog          #+#    #+#             */
-/*   Updated: 2025/01/19 05:28:56 by ymetinog         ###   ########.fr       */
+/*   Updated: 2025/01/19 06:10:41 by ymetinog         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <unistd.h>
+#include <stdarg.h>
 
 static int	ft_phchck(const char str)
 {

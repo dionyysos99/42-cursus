@@ -3,16 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ymetinog <ymetinog@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ymetinog <ymetinog@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 10:01:57 by ymetinog          #+#    #+#             */
-/*   Updated: 2024/10/26 10:02:42 by ymetinog         ###   ########.fr       */
+/*   Updated: 2025/01/19 06:09:58 by ymetinog         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
-# include <stdarg.h>
 
 int	ft_printf(const char *str, ...);
 int	ft_putchar(char c);
