@@ -6,7 +6,7 @@
 /*   By: ymetinog <ymetinog@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 09:55:06 by ymetinog          #+#    #+#             */
-/*   Updated: 2025/01/18 13:47:25 by ymetinog         ###   ########.fr       */
+/*   Updated: 2025/01/19 05:28:56 by ymetinog         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,8 +51,6 @@ int	ft_printf(const char *str, ...)
 	ccounter = 0;
 	i = 0;
 	temp = 0;
-	if(str == (void *)0)
-		return (0);
 	va_start(arg, str);
 	while (str[i])
 	{
@@ -71,4 +69,3 @@ int	ft_printf(const char *str, ...)
 	va_end(arg);
 	return (ccounter);
 }
-
